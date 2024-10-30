@@ -29,3 +29,5 @@ bin/
 .DS_Store
 /.idea
 /online_store_demo.iml
+/target
+/OnlineStoreProject.iml
