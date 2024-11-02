@@ -39,6 +39,7 @@ public class ProductsDAO {
                 product = new Product();
                 product.setName(resultSet.getString("name"));
                 product.setDescription(resultSet.getString("description"));
+                product.setId(id);
             }
         }
 
