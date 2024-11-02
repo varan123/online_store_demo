@@ -10,21 +10,41 @@ import javax.sql.DataSource;
 @Configuration
 public class DBConfig {
 
+    /**
+     * The @Value annotation is used to inject values from the
+     * application.properties file into the fields of the class.
+     */
     @Value("${spring.datasource.url}")
-    String url;
+    private String url;
 
+    /**
+     * The @Value annotation is used to inject values from the
+     * application.properties file into the fields of the class.
+     */
     @Value("${spring.datasource.username}")
-    String username;
+    private String username;
 
+    /**
+     * The @Value annotation is used to inject values from the
+     * application.properties file into the fields of the class.
+     */
     @Value("${spring.datasource.password}")
-    String password;
+    private String password;
 
+    /**
+     * The @Value annotation is used to inject values from the
+     * application.properties file into the fields of the class.
+     */
     @Value("${spring.datasource.driverClassName}")
-    String driver;
+    private String driver;
 
+    /**
+     * The @Bean annotation is used to define a bean in the Spring
+     * application context.
+     * @return DataSource
+     */
     @Bean
-    public DataSource dataSource()
-    {
+    public DataSource dataSource() {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName(driver);
         dataSourceBuilder.url(url);

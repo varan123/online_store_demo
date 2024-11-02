@@ -25,6 +25,7 @@
         <flyway.version>10.20.1</flyway.version>
         <lombok.version>1.18.30</lombok.version>
         <maven-surefire-plugin.version>3.5.1</maven-surefire-plugin.version>
+        <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
     </properties>
 
     <dependencies>
@@ -89,6 +90,22 @@
                 <configuration>
                     <argLine>-XX:+EnableDynamicAgentLoading</argLine>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${maven-checkstyle-plugin.version}</version>
+                <configuration>
+                    <configLocation>checkstyle.xml</configLocation>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
