@@ -41,7 +41,9 @@ public final class PasswordUtil {
                                          final String encryptedPassword) {
         PasswordEncoder passwordEncoder =
                 Pbkdf2PasswordEncoder.defaultsForSpringSecurity_v5_8();
-        return passwordEncoder.matches(password + username, encryptedPassword);
+        boolean result = passwordEncoder.matches(password + username,
+                encryptedPassword);
+        return result;
     }
 
 }
