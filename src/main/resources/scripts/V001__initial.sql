@@ -4,6 +4,11 @@ CREATE TABLE role (
     PRIMARY KEY (id)
 );
 
+INSERT INTO role (id, name) VALUES (1, 'GUEST');
+INSERT INTO role (id, name) VALUES (2, 'CUSTOMER');
+INSERT INTO role (id, name) VALUES (3, 'MANAGER');
+INSERT INTO role (id, name) VALUES (4, 'SUPERVISOR');
+
 CREATE TABLE sys_user (
     id INTEGER NOT NULL auto_increment,
     email VARCHAR(255) NOT NULL,
